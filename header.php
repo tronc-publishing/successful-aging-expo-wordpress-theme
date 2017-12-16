@@ -48,7 +48,7 @@
     <link href="//www.google-analytics.com" rel="dns-prefetch">
     <title>
   		<?php
-  			if(is_front_page())	echo('Home | ');
+  			if (is_front_page()) echo('Home | ');
 				else wp_title(' | ', true, 'right');
   			if (wp_title('', false)) echo ' ';
   			bloginfo('name');

@@ -1,61 +1,57 @@
 <?php
   $socialLinks = [
-    [
-      'link' => get_option('social-facebook'),
-      'class' => 'facebook'
-    ],
-    [
-      'link' => get_option('social-twitter'),
-      'class' => 'twitter'
-    ],
-    [
-      'link' => get_option('social-linkedin'),
-      'class' => 'linkedin-square'
-    ],
-    [
-      'link' => get_option('social-instagram'),
-      'class' => 'instagram'
-    ],
-    [
-      'link' => get_option('social-google'),
-      'class' => 'google-plus'
-    ],
-    [
-      'link' => get_option('social-vimeo'),
-      'class' => 'vimeo-square'
-    ],
-    [
-      'link' => get_option('social-pinterest'),
-      'class' => 'pinterest-square'
-    ],
-    [
-      'link' => get_option('social-email'),
-      'class' => 'envelope'
-    ]
+    [ 'link' => get_option('social-facebook'), 'class' => 'facebook' ],
+    [ 'link' => get_option('social-twitter'), 'class' => 'twitter' ],
+    [ 'link' => get_option('social-linkedin'), 'class' => 'linkedin-square' ],
+    [ 'link' => get_option('social-instagram'), 'class' => 'instagram' ],
+    [ 'link' => get_option('social-google'), 'class' => 'google-plus' ],
+    [ 'link' => get_option('social-vimeo'), 'class' => 'vimeo-square' ],
+    [ 'link' => get_option('social-pinterest'), 'class' => 'pinterest-square' ],
+    [ 'link' => get_option('social-email'), 'class' => 'envelope' ]
   ];
 
   $b2bCallout = nl2br(get_option('b2b-callout'));
   $copyTxt = get_option('copyright-txt');
 ?>
 
-<?php if(!is_page('b2b') && !is_page('contact-us')) : ?>
-  <section id="formsCon">
-    <div class="sectionBlk pAll0">
-      <div class="container flex alpha omega clearfix">
+<section id="formsCon">
+  <div class="sectionBlk pAll0">
+    <div class="container flex alpha omega clearfix">
+      <?php if(!is_page('b2b') && !is_page('contact-us')) : ?>
         <div id="entertainCon" class="des-column col_12 txtCenter">
           <div class="des-inner desMinBT des-minInner bkgrdBLU pt80 pb80">
             <h3 class="lgTxt colorWHT txtCaps mb25"><strong class="mdBold"><?php _e($b2bCallout); ?></strong></h3>
             <a class="typBtn orgBtn" href="<?php echo get_permalink(get_page_by_title('b2b')); ?>" rel="nofollow">Learn More</a>
           </div>
         </div>
-      </div>
+      <?php else : ?>
+        <div id="expertCon" class="des-column col_6 txtCenter">
+          <div class="des-inner desMinBT des-minInner bkgrdBLU mRT1 pt80 pb80">
+            <h3 class="lgTxt colorWHT txtCaps mb25"><strong class="mdBold">Expert Speaker Series Application</strong></h3>
+            <a class="typBtn orgBtn" href="https://docs.google.com/forms/d/e/1FAIpQLSdTOMIiUSwAn9CnH6TkKduUxgI3OZ5gQIDqW-YRLyVmtdyaNA/viewform?c=0&w=1" rel="nofollow">Submit Application</a>
+          </div>
+        </div>
+        <div id="entertainCon" class="des-column col_6 txtCenter">
+          <div class="des-inner desMinBT des-minInner bkgrdBLU pt80 pb80">
+            <h3 class="lgTxt colorWHT txtCaps mb25"><strong class="mdBold">Entertainment Stage Application</strong></h3>
+            <a class="typBtn orgBtn" href="https://docs.google.com/forms/d/e/1FAIpQLSebM6xJ_Y85t6h3K0Vycn0CD0ofD68ZGpO5GM3823VGzJJUeA/viewform?c=0&w=1" rel="nofollow">Submit Application</a>
+          </div>
+        </div>
+      <?php endif; ?>
     </div>
-  </section> <!-- END #formsCon -->
-<?php endif; ?>
+  </div>
+</section> <!-- END #formsCon -->
 
+<?php
+  if (is_page('contact-us'))
+    get_template_part('./template-parts/ad-leaderboard');
 
-<?php get_template_part('./template-parts/sponsors') ?>
-<?php dynamic_sidebar('footer-newsletter'); ?>
+  if (is_page('b2b') || is_page('contact-us'))
+    get_template_part('./template-parts/content-contact-form');
+
+  if (!is_page('b2b'))
+    get_template_part('./template-parts/content-sponsors')
+?>
 
 <footer id="footer">
   <div class="sectionBlk pt50 pb50">
