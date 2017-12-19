@@ -23,6 +23,8 @@
   require get_template_directory() . '/theme/custom-post-type/entertainmentpg-custom-type_custTAX.php';
   require get_template_directory() . '/theme/custom-post-type/exhibitorspg-custom-type_custTAX.php';
   require get_template_directory() . '/theme/custom-post-type/locationpg-custom-type_custTAX.php';
+  require get_template_directory() . '/theme/custom-post-type/contactuspg-custom-type_custTAX.php';
+  require get_template_directory() . '/theme/custom-post-type/adspg-custom-type_custTAX.php';
   // require get_template_directory() . '/theme/custom-post-type/eventspg-custom-type_custTAX.php';
   // require get_template_directory() . '/theme/custom-post-type/portfoliopg-custom-type_custTAX.php';
   // require get_template_directory() . '/theme/custom-post-type/audiencepg-custom-type_custTAX.php';
@@ -91,9 +93,9 @@
 		));
 
     // register_sidebar(array(
-		// 	'name' => __('B2B Link', 'sae'),
-		// 	'description' => __('B2B Link', 'sae'),
-		// 	'id' => 'b2b-link',
+		// 	'name' => __('Ads', 'sae'),
+		// 	'description' => __('Ads', 'sae'),
+		// 	'id' => 'ads',
     //   'before_widget' => '<h3 id="%1$s" class="%2$s lgTxt colorWHT txtCaps mb25"><strong class="mdBold">',
 		// 	'after_widget' => '</strong></h3>',
     //   'before_title' => '<span style="display: none;">',
