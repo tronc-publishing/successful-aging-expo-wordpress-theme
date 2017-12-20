@@ -10,14 +10,14 @@
     return $time;
   }
 
-  $args = array(
-    'type' => "{$type}-page",
-    'taxonomy' => "custom_cat_{$type}",
-  );
+  $args = array( 'type' => "{$type}-page", 'taxonomy' => "custom_cat_{$type}" );
   $categories = get_categories($args);
 
-  // Need to get this for real
-  $showAds = true;
+  // Check if ads are shown
+  $args = array( 'post_type' => 'ads-page', 'name' => 'halfpage' );
+  $adHalfpage = new WP_Query($args);
+  $showAds = get_post_meta($adHalfpage->post->ID, 'ad-show', true);
+  wp_reset_postdata();
 ?>
 
 <!-- NAV  -->
@@ -105,7 +105,11 @@
           </ul>
         </div>
       </div>
-      <?php get_template_part('./template-parts/ad-halfpage') ?>
+      <div class="des-column col_4 col_lg_12 ad">
+        <div class="des-inner">
+          <?php get_template_part('./template-parts/ad-halfpage') ?>
+        </div>
+      </div>
     </section>
 
   <?php else : ?>

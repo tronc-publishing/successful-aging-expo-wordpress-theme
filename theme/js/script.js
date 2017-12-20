@@ -57,8 +57,8 @@ jQuery(document).ready(function () {
 
 	uName.blur(validateName);
 	uEmail.blur(validateEmail);
-    uPhone.blur(validatePhone);
-    uMsg.blur(validateMsg);
+  uPhone.blur(validatePhone);
+  uMsg.blur(validateMsg);
 
 	jQuery('#submitBtn').click(function (e) {
 		e.preventDefault();

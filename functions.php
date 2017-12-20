@@ -16,6 +16,7 @@
     // require get_template_directory() . '/admin/contact-mBox.php';
     // require get_template_directory() . '/admin/resources-mBox.php';
     // require get_template_directory() . '/admin/program-mBox-cta.php';
+    require get_template_directory() . '/admin/ads-mBox.php';
   }
   // require get_template_directory() . '/admin/login-core.php';
   require get_template_directory() . '/theme/custom-post-type/homepg-custom-type_custTAX.php';
