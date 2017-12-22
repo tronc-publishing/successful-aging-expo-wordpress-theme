@@ -623,9 +623,13 @@ a.open .hamNav span:nth-child(4) {
 	font-weight: 800;
 }
 #about p {
-	font-size: 22px;
+	/* font-size: 22px;
 	font-weight: 500;
-	line-height: 30px;
+	line-height: 30px; */
+	font-size: 32px;
+	line-height: 40px;
+	font-weight: 600;
+	color: #21418d;
 }
 #leaderboard {
 	background: #e8e8e8;
@@ -682,7 +686,7 @@ a.open .hamNav span:nth-child(4) {
     color: #21418d;
     text-decoration: underline;
 }
-.typBtn {
+.document-link a, .typBtn {
     background: #ed5a2a;
     font-family: 'Raleway', Arial, sans-serif;
     font-size: 20px;
@@ -697,21 +701,21 @@ a.open .hamNav span:nth-child(4) {
     display: inline-block;
     cursor: pointer;
 }
-.typBtn.orgBtn {
+.document-link a, .typBtn.orgBtn {
     background: #ed5a2a;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ed5a2a), color-stop(100%,#d85226));
     background: -moz-linear-gradient(top, #ed5a2a 0%, #d85226 100%);
     background: linear-gradient(to bottom, #ed5a2a 0%,#d85226 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed5a2a', endColorstr='#d85226',GradientType=0);
 }
-.typBtn.orgBtn:hover, .typBtn.orgBtn:active {
+.document-link a:hover, .typBtn.orgBtn:hover, .document-link a:active, .typBtn.orgBtn:active {
     background: #d85226;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d85226), color-stop(100%,#ed5a2a));
     background: -moz-linear-gradient(top, #d85226 0%, #ed5a2a 100%);
     background: linear-gradient(to bottom, #d85226 0%,#ed5a2a 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d85226', endColorstr='#ed5a2a',GradientType=0);
 }
-.typBtn.orgBtn:active {
+.document-link a:active, .typBtn.orgBtn:active {
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.22);
 }
 #pProgress, #pSuccess {

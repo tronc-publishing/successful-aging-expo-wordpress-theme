@@ -16,8 +16,8 @@ jQuery(document).ready(function () {
       });
   }
 
-  jQuery('.section-link').smoothScroll({
-  // jQuery('a').smoothScroll({
+  // jQuery('.section-link').smoothScroll({
+  jQuery('a').smoothScroll({
       speed: 400,
       offset: 0
   });

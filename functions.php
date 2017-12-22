@@ -1,6 +1,5 @@
 <?php
 
-
   if(is_admin()) {
     require get_template_directory() . '/admin/admin-core.php';
     require get_template_directory() . '/admin/schedule-mBox-cta.php';
@@ -25,6 +24,7 @@
   require get_template_directory() . '/theme/custom-post-type/exhibitorspg-custom-type_custTAX.php';
   require get_template_directory() . '/theme/custom-post-type/locationpg-custom-type_custTAX.php';
   require get_template_directory() . '/theme/custom-post-type/contactuspg-custom-type_custTAX.php';
+  require get_template_directory() . '/theme/custom-post-type/b2bpg-custom-type_custTAX.php';
   require get_template_directory() . '/theme/custom-post-type/adspg-custom-type_custTAX.php';
   // require get_template_directory() . '/theme/custom-post-type/eventspg-custom-type_custTAX.php';
   // require get_template_directory() . '/theme/custom-post-type/portfoliopg-custom-type_custTAX.php';
@@ -92,17 +92,6 @@
       'before_title' => '<span style="display: none;">',
       'after_title' => '</span>'
 		));
-
-    // register_sidebar(array(
-		// 	'name' => __('Ads', 'sae'),
-		// 	'description' => __('Ads', 'sae'),
-		// 	'id' => 'ads',
-    //   'before_widget' => '<h3 id="%1$s" class="%2$s lgTxt colorWHT txtCaps mb25"><strong class="mdBold">',
-		// 	'after_widget' => '</strong></h3>',
-    //   'before_title' => '<span style="display: none;">',
-    //   'after_title' => '</span>'
-		// ));
-
     register_sidebar(array(
 			'name' => __('Footer Column One', 'sae'),
 			'description' => __('Footer - Column One', 'sae'),
@@ -121,15 +110,33 @@
 			'before_title' => '<h6 class="colorORG mb5">',
 			'after_title' => '</h6><div class="titleDivLine footDivLine"></div>'
 		));
-    // register_sidebar(array(
-		// 	'name' => __('Footer Newsletter', 'sae'),
-		// 	'description' => __('Footer - Newsletter', 'sae'),
-		// 	'id' => 'footer-newsletter',
-		// 	'before_widget' => '<div id="%1$s" class="%2$s footNav footNavFull">',
-		// 	'after_widget' => '</div>',
-		// 	'before_title' => '<h5 class="cOrange mb8">',
-		// 	'after_title' => '</h5><div class="titleDivLine footDivLine"></div>'
-		// ));
+    register_sidebar(array(
+			'name' => __('Footer B2B Link Left', 'sae'),
+			'description' => __('Footer - B2B Link Left', 'sae'),
+			'id' => 'footer-b2b-link-left',
+			'before_widget' => '<div class="des-inner desMinBT des-minInner bkgrdBLU pt80 pb80">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="lgTxt colorWHT txtCaps mb25"><strong class="mdBold">',
+			'after_title' => '</strong></h3>'
+		));
+    register_sidebar(array(
+			'name' => __('Footer Document Link Left', 'sae'),
+			'description' => __('Footer - Document Link Left', 'sae'),
+			'id' => 'footer-document-link-left',
+			'before_widget' => '<div class="des-inner desMinBT des-minInner bkgrdBLU mRT1 pt80 pb80">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="lgTxt colorWHT txtCaps mb25"><strong class="mdBold">',
+			'after_title' => '</strong></h3>'
+		));
+    register_sidebar(array(
+			'name' => __('Footer Document Link Right', 'sae'),
+			'description' => __('Footer - Document Link Right', 'sae'),
+			'id' => 'footer-document-link-right',
+			'before_widget' => '<div class="des-inner desMinBT des-minInner bkgrdBLU pt80 pb80">',
+			'after_widget' => '</div>',
+      'before_title' => '<h3 class="lgTxt colorWHT txtCaps mb25"><strong class="mdBold">',
+			'after_title' => '</strong></h3>'
+		));
 	}
   add_action('after_setup_theme', 'sae_setup');
 

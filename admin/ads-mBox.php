@@ -1,6 +1,6 @@
 <?php
 
-	function add_ads_mbox(){
+	function add_ads_mbox() {
 		add_meta_box(
 			'sae-ads',                						// Unique ID
 			'Add Advertisment Link',              // Title

@@ -23,7 +23,7 @@
   $expoTime = get_option('expo-time');
   $expoVenue = nl2br(get_option('expo-venue'));
   $expoAddress = nl2br(get_option('expo-address'));
-  $expoMap = get_option('expo-map');
+	$expoMap = urlencode(get_option('expo-address'));
 
 	global $heroTitle, $heroSubtitle;
 	if (have_posts()) :

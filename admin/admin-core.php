@@ -53,19 +53,31 @@
 
 						<div class="qContent">
 							<div class="qBlock clearfix">
-								<div class="qElem last">
+								<div class="qElem">
 									<div class="question">Expo Venue:</div>
 	                <textarea name="expo-venue"><?php echo get_option('expo-venue'); ?></textarea>
 								</div>
 							</div>
 							<div class="qBlock clearfix">
-								<div class="qElem last">
+								<div class="qElem">
 									<div class="question">Expo Address:</div>
 	                <textarea name="expo-address"><?php echo get_option('expo-address'); ?></textarea>
 								</div>
 							</div>
 							<div class="qBlock clearfix">
 								<div class="qElem">
+									<div class="question">Expo Email Address:</div>
+									<input type="text" name="expo-email" placeholder="<?php _e('Example: me@mine.com', 'sae'); ?>" value="<?php echo get_option('expo-email'); ?>" />
+								</div>
+							</div>
+							<div class="qBlock clearfix">
+								<div class="qElem">
+									<div class="question">Expo Phone Number:</div>
+									<input type="text" name="expo-phone" placeholder="<?php _e('Example: 555.555.5555', 'sae'); ?>" value="<?php echo get_option('expo-phone'); ?>" />
+								</div>
+							</div>
+							<div class="qBlock clearfix">
+								<div class="qElem last">
 									<div class="question">Expo Google Map Link:</div>
 									<input type="text" name="expo-map" placeholder="<?php _e('Example: https://goo.gl/maps/TTyCHhb8JEx', 'sae'); ?>" value="<?php echo get_option('expo-map'); ?>" />
 								</div>
@@ -104,7 +116,7 @@
 
             <input type="submit" name="Submit" value="Save Options" />
             <input type="hidden" name="action" value="update" />
-            <input type="hidden" name="page_options" value="expo-date, expo-time, expo-venue, expo-address, expo-map, toggle-logo, logo-image, toggle-favicon, favicon-image" />
+            <input type="hidden" name="page_options" value="expo-date, expo-time, expo-venue, expo-address, expo-email, expo-phone, expo-map, toggle-logo, logo-image, toggle-favicon, favicon-image" />
         	</form>
         </div>
       <?php

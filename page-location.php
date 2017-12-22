@@ -10,14 +10,19 @@
 ?>
 
 <style media="screen">
-  /*#map iframe {
+  #map iframe {
     width: 100%;
-  }*/
+  }
 </style>
 
 <section id="map" class="container flex alpha omega clearfix">
   <div class="col_12 google-maps">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14035.562351883635!2d-81.4736918481107!3d28.422558105296666!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77e378ec5a9a9%3A0x2feec9271ed22c5b!2sOrange+County+Convention+Center!5e0!3m2!1sen!2sus!4v1510340313438" height="400" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe
+      width="600"
+      height="450"
+      frameborder="0" style="border:0"
+      src="<?php echo "https://www.google.com/maps/embed/v1/place?key=AIzaSyAQiCFzV7wxzre-usrWH-RrQMySWSqDGm0&zoom=14&q={$expoMap}"; ?>" allowfullscreen>
+    </iframe>
   </div>
 </section>
 

@@ -17,27 +17,26 @@
 <section id="formsCon">
   <div class="sectionBlk pAll0">
     <div class="container flex alpha omega clearfix">
+
       <?php if(!is_page('b2b') && !is_page('contact-us')) : ?>
-        <div id="entertainCon" class="des-column col_12 txtCenter">
+        <div id="entertainCon" class="document-link des-column col_12 txtCenter">
           <div class="des-inner desMinBT des-minInner bkgrdBLU pt80 pb80">
-            <h3 class="lgTxt colorWHT txtCaps mb25"><strong class="mdBold"><?php _e($b2bCallout); ?></strong></h3>
+            <h3 class="lgTxt colorWHT txtCaps mb25"><strong class="mdBold"><?php _e($b2bCallout); ?></strong></h3> -->
             <a class="typBtn orgBtn" href="<?php echo get_permalink(get_page_by_title('b2b')); ?>" rel="nofollow">Learn More</a>
           </div>
+          <?php // dynamic_sidebar('footer-b2b-link-left') ?>
         </div>
+
       <?php else : ?>
-        <div id="expertCon" class="des-column col_6 txtCenter">
-          <div class="des-inner desMinBT des-minInner bkgrdBLU mRT1 pt80 pb80">
-            <h3 class="lgTxt colorWHT txtCaps mb25"><strong class="mdBold">Expert Speaker Series Application</strong></h3>
-            <a class="typBtn orgBtn" href="https://docs.google.com/forms/d/e/1FAIpQLSdTOMIiUSwAn9CnH6TkKduUxgI3OZ5gQIDqW-YRLyVmtdyaNA/viewform?c=0&w=1" rel="nofollow">Submit Application</a>
-          </div>
+        <div id="expertCon" class="document-link des-column col_6 txtCenter">
+          <?php dynamic_sidebar('footer-document-link-left') ?>
         </div>
-        <div id="entertainCon" class="des-column col_6 txtCenter">
-          <div class="des-inner desMinBT des-minInner bkgrdBLU pt80 pb80">
-            <h3 class="lgTxt colorWHT txtCaps mb25"><strong class="mdBold">Entertainment Stage Application</strong></h3>
-            <a class="typBtn orgBtn" href="https://docs.google.com/forms/d/e/1FAIpQLSebM6xJ_Y85t6h3K0Vycn0CD0ofD68ZGpO5GM3823VGzJJUeA/viewform?c=0&w=1" rel="nofollow">Submit Application</a>
-          </div>
+        <div id="entertainCon" class="document-link des-column col_6 txtCenter">
+          <?php dynamic_sidebar('footer-document-link-right') ?>
         </div>
+
       <?php endif; ?>
+
     </div>
   </div>
 </section> <!-- END #formsCon -->

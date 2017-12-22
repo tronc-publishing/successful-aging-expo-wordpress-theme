@@ -14,10 +14,8 @@
       <?php $title = get_post(get_post_thumbnail_id())->post_title; ?>
 
       <script type="text/javascript">
-        jQuery(document).ready(function() {
-          jQuery('#adHalfpage').click(function(){
-            ga('send', 'event', '<?php echo "{$title}-ad"; ?>', '<?php echo "{$title}-halfpage"; ?>');
-          });
+        document.getElementById('adHalfpage').addEventListener('click', function() {
+          ga('send', 'event', '<?php echo "{$title}-ad"; ?>', '<?php echo "{$title}-halfpage"; ?>');
         });
       </script>
 

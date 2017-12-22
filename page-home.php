@@ -38,11 +38,13 @@
             <?php if ($postNum == 1) : ?>
             <div class="des-column col_6">
                 <div class="des-inner">
-                  <?php if (get_post_format() == 'image') : ?>
-                    <?php the_post_thumbnail('large'); ?>
-                  <?php elseif (get_post_format() == 'video') : ?>
-                    <!-- show video here -->
-                  <?php endif; ?>
+                  <?php
+                    if (get_post_format() == 'video') :
+                      // show video here
+                    else :
+                      the_post_thumbnail('large');
+                    endif;
+                  ?>
                 </div>
             </div>
             <?php endif; ?>
@@ -95,7 +97,7 @@
   ?>
 
   <?php if ($home->have_posts()) : ?>
-    <?php while ($home->have_posts()) : $home->the_post(); $postNum = $home->current_post; ?>
+    <?php while ($home->have_posts()) : $home->the_post(); ?>
 
       <section id="location" style="background-image: url('<?php echo the_post_thumbnail_url('full'); ?>')">
         <div class="sectionBlk">
@@ -106,7 +108,7 @@
               <h5 class="mb15"><strong class="mdBold"><?php _e($expoTime); ?></strong></h5>
               <h3 class="mb4"><strong class="mdBold"><?php _e($expoVenue); ?></strong></h3>
               <h5 class="mb20"><strong class="mdBold"><?php _e($expoAddress); ?></strong></h5>
-              <a class="clearBtn" href="<?php echo $expoMap; ?>" target="_blank" rel="nofollow">View Map</a>
+              <a class="clearBtn" href="<?php echo "https://www.google.com/maps/search/?api=1&query={$expoMap}"; ?>" target="_blank" rel="nofollow">View Map</a>
             </div>
           </div>
         </div>
